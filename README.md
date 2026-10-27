@@ -167,3 +167,23 @@ DSH 的 IM 插件默认只能发文字，Web 里能看的图到了 QQ 是空框�
 同仓库根目录下就是我在用的原件：set-pagefile.ps1（改页面文件，需管理员）、un_train.cmd（8G 卡的训练参数）、dataset.toml（数据集配置）、comfy_gen.py（ComfyUI 出图 + 图生图）、patch-im.mjs / uild-im.mjs（DSH 的 IM 插件图片补丁）、send-qq-image.mjs。
 
 路径里的 `C:\ai` 是占位，改成你自己的目录。
+## 七、图注怎么写（训完之后才明白，比参数更影响结果）
+
+一开始我把图注写成标签串，跟 SD1.5 时代一样：
+
+```
+angry pouting, jingwhale, chibi anime sticker, blue long hair, whale-fin ears, white frilled apron over navy dress
+```
+
+SDXL 的原生 prompt 训练里，caption 更吃**自然语言**。同样一个角色，写成一句话，泛化性和可控性都更好：
+
+```
+jingwhale, angry pouting. A chibi anime sticker of a blue-haired whale girl with fin-like ears and a small whale tail, wearing a white frilled apron over a navy dress, thick clean outline, flat pastel colours, plain white background.
+```
+
+两条经验：
+
+- 一个角度别堆太多张（一两张就够）。同一角度塞十张，模型会把它当成「这个角色只有这个姿势」。
+- 描述要短但准确；模糊、低清的样本宁可不加。
+
+（来源是 B 站专栏里一位训练者的经验，不是我自己试出来的——标出来。）
