@@ -1,0 +1,18 @@
+[general]
+caption_extension = ".txt"
+
+# 注意：开启 --cache_text_encoder_outputs 后不能用 shuffle_caption / keep_tokens /
+# caption_dropout_rate 这些会影响文本编码结果的选项（sdxl_train_network.py 会断言失败）。
+
+[[datasets]]
+resolution = [512, 512]
+batch_size = 1
+enable_bucket = true
+min_bucket_reso = 512
+max_bucket_reso = 768
+
+  [[datasets.subsets]]
+  image_dir = 'C:\ai\lora\dataset\10_jingwhale'
+  num_repeats = 20
+  class_tokens = "jingwhale"
+  caption_extension = ".txt"
