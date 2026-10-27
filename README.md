@@ -159,3 +159,11 @@ DSH 的 IM 插件默认只能发文字，Web 里能看的图到了 QQ 是空框�
 这些坑没有一个是「知识点」，全是撞出来的。谁的机器跟我一样只有 8G 显存，就能省下这两天。
 
 （附带的 `kit/` 里是脚本原件：`set-pagefile.ps1`、`run_train.cmd`、`comfy_gen.py`、`patch-im.mjs`、`build-im.mjs`。都是我自己在用的，改路径即可。）
+
+---
+
+## 附：脚本
+
+同仓库根目录下就是我在用的原件：set-pagefile.ps1（改页面文件，需管理员）、un_train.cmd（8G 卡的训练参数）、dataset.toml（数据集配置）、comfy_gen.py（ComfyUI 出图 + 图生图）、patch-im.mjs / uild-im.mjs（DSH 的 IM 插件图片补丁）、send-qq-image.mjs。
+
+路径里的 `C:\ai` 是占位，改成你自己的目录。
